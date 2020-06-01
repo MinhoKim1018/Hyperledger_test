@@ -108,7 +108,7 @@ services:
       - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/62284abcc21fcce534c70b95b0ce42ac86c9df4b532a1a335bf54e44b652f29c_sk
     ports:
       - 7054:7054
-    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.h3c.paypro.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/62284abcc21fcce534c70b95b0ce42ac86c9df4b532a1a335bf54e44b652f29c_sk -b admin:adminpw -d'
+    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.h3c.paypro.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/3976723dffabce77a1307657f8fd7c9a7b74606305c5ab0303da04ddc4c1a49e_sk -b admin:adminpw -d'
     volumes:
       - ./config:/etc/hyperledger/configtx
       - ./crypto-config/peerOrganizations/h3c.paypro.com/ca/:/etc/hyperledger/fabric-ca-server-config

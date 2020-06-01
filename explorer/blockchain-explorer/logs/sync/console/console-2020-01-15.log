@@ -1,0 +1,1333 @@
+11111111111111111111111111111111111111111
+
+Sync process is started for the network : [paypro] and client : [paypro]
+config.client.tlsEnable  true
+FabricConfig, this.config.channels  allchannel
+(node:40457) DeprecationWarning: grpc.load: Use the @grpc/proto-loader module with grpc.loadPackageDefinition instead
+An identity for the admin user: admin already exists in the wallet
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+Channel genesis hash for channel [allchannel] >> 38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#
+FabricEvent {
+  client:
+   FabricClient {
+     client_name: 'paypro',
+     hfc_client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'h3cMSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: [SigningIdentity],
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     fabricGateway:
+      FabricGateway {
+        networkConfig:
+         '/Users/paypro/project/hyperLedger/hyper_mh/basic-network/explorer/blockchain-explorer/app/platform/fabric/connection-profile/paypro.json',
+        config: [Object],
+        gateway: [Gateway],
+        userName: 'admin',
+        enrollmentSecret: 'adminpw',
+        identityLabel: 'admin',
+        mspId: 'h3cMSP',
+        wallet: [FileSystemWallet],
+        tlsEnable: true,
+        defaultChannelName: 'allchannel',
+        defaultPeer: 'peer0.h3c.paypro.com',
+        defaultPeerUrl: 'grpcs://localhost:7051',
+        fabricConfig: [FabricConfig],
+        fabricCaEnabled: true,
+        networkName: 'paypro',
+        client: [Client],
+        FSWALLET: 'wallet/paypro',
+        enableAuthentication: undefined },
+     defaultPeer: 'peer0.h3c.paypro.com',
+     defaultMspId: 'h3cMSP',
+     defaultChannel:
+      Channel {
+        _name: 'allchannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1579064004943,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     defaultOrderer:
+      Orderer {
+        _options: [Object],
+        clientCert:
+         '-----BEGIN CERTIFICATE-----\nMIIB/jCCAaSgAwIBAgIURn3w7p/K2pHIwXg9Wo/f7BgzbcEwCgYIKoZIzj0EAwIw\nbzELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh\nbiBGcmFuY2lzY28xFzAVBgNVBAoTDmgzYy5wYXlwcm8uY29tMRowGAYDVQQDExFj\nYS5oM2MucGF5cHJvLmNvbTAeFw0xOTEyMTkwOTIyMDBaFw0yMDEyMTgwOTI3MDBa\nMCExDzANBgNVBAsTBmNsaWVudDEOMAwGA1UEAxMFYWRtaW4wWTATBgcqhkjOPQIB\nBggqhkjOPQMBBwNCAAQ0DLjmS9HCncVBtY5vwUExNaFfigCbrx6hrC7hymjrnXtc\nUw6B71G8uklgVhRD/W5eXm6vxfM4aKo4m5JzU78Ao2wwajAOBgNVHQ8BAf8EBAMC\nB4AwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUarIHcxcMWuSrkYFroDaUMGIaPDAw\nKwYDVR0jBCQwIoAgMQcoKWnCqsum7NkWi0PAKEMCNnW/ZX9XRAxnvkO3zAEwCgYI\nKoZIzj0EAwIDSAAwRQIhAM9LHh1/eHZYts8ekART93oUqRDUHTeyugAyJb/AdyG4\nAiAzAu0R4+kVW7qkKFG+OYdbQFzRVIXcK7POnwXcrkirnw==\n-----END CERTIFICATE-----\n',
+        _url: 'grpcs://localhost:7050',
+        _endpoint: [Endpoint],
+        _name: 'orderer0.paypro.com',
+        _request_timeout: 45000,
+        _grpc_wait_for_ready_timeout: 3000,
+        _ordererClient: [ServiceClient],
+        _sendDeliverConnect: false },
+     channelsGenHash:
+      Map {
+        'allchannel' => '38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' },
+     client_config:
+      { name: 'paypro',
+        profile: './connection-profile/paypro.json',
+        enableAuthentication: false },
+     config:
+      { name: 'paypro',
+        'x-type': 'hlfv1.1',
+        version: '1.0',
+        client: [Object],
+        channels: [Object],
+        organizations: [Object],
+        peers: [Object],
+        orderers: [Object],
+        certificateAuthorities: [Object] },
+     peerroles:
+      { endorsingPeer: 'endorsingPeer',
+        chaincodeQuery: 'chaincodeQuery',
+        ledgerQuery: 'ledgerQuery',
+        eventSource: 'eventSource',
+        discover: 'discover',
+        all: 'all' },
+     status: true,
+     tls: true,
+     asLocalhost: true },
+  fabricServices:
+   SyncServices {
+     platform:
+      SyncPlatform {
+        network_name: 'paypro',
+        client_name: 'paypro',
+        client: [FabricClient],
+        eventHub: [Circular],
+        sender: [ExplorerSender],
+        persistence: [Persist],
+        syncService: [Circular],
+        blocksSyncTime: 60000,
+        client_configs: [Object] },
+     persistence:
+      Persist {
+        pgservice: [PgService],
+        metricservice: [MetricService],
+        crudService: [CRUDService] },
+     blocks: [],
+     synchInProcess: [] } }
+!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#!@#
+44444444444444444444444444444444444444444444444444444444
+
+
+Synchronizer pid is 40457
+
+
+saveTransaction  true
+block_row.blocknum  18
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 18 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 18 established with 1 tx',
+  time: 2020-01-14T08:18:30.814Z,
+  txcount: 1,
+  datahash:
+   '06ac57b5e7aed0e59d63bf86137894c2c9269d9f6c3c0cd871bf96feb212ba6f',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  0
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 0 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 0 established with 1 tx',
+  time: 2020-01-13T06:23:34.000Z,
+  txcount: 1,
+  datahash:
+   '43eb381bb1e392cf898c0f17a10db333a82721e9a86481c4da2dd21137a265e4',
+  blksize: '14' }
+saveTransaction  true
+block_row.blocknum  1
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 1 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 1 established with 1 tx',
+  time: 2020-01-13T06:24:07.926Z,
+  txcount: 1,
+  datahash:
+   'f2baeeb8ff30b3ad2314a9cf1abe664b2f440b3ff6ded0be962c1a23fea397a2',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  2
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 2 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 2 established with 1 tx',
+  time: 2020-01-13T06:24:14.247Z,
+  txcount: 1,
+  datahash:
+   '8a59a950c6807accee4f4b7fcf25f8c92f540b0274e446c2adff9a2c269bfb40',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  3
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 3 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 3 established with 1 tx',
+  time: 2020-01-13T06:24:51.450Z,
+  txcount: 1,
+  datahash:
+   'a383ef12aedaa2087ebb71e5210b720546e9ea30b8ec2e75a1ba42fcf8f5babe',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  4
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 4 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 4 established with 1 tx',
+  time: 2020-01-13T06:24:59.723Z,
+  txcount: 1,
+  datahash:
+   'df0007d86d7cfd5dd1cd3e38964f300e7afe869e8a2e8c5ebcc938b06805d647',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  5
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 5 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 5 established with 1 tx',
+  time: 2020-01-13T06:25:06.530Z,
+  txcount: 1,
+  datahash:
+   '539f618274e4396f6128ee3ff6ab080be37dc2f59a56cf403b96e841fa0d4cd1',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  6
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 6 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 6 established with 1 tx',
+  time: 2020-01-13T06:25:14.702Z,
+  txcount: 1,
+  datahash:
+   'bd71a85d6bc898ae94df2eb9c44e4203f9577447ef93031a059905e8bce7a3ba',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  7
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 7 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 7 established with 1 tx',
+  time: 2020-01-13T06:25:23.652Z,
+  txcount: 1,
+  datahash:
+   'ca655fe7d09d3d6f1ce9a9ccb50ec3c09842b243216d8e89c7365ca53e15708a',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  8
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 8 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 8 established with 1 tx',
+  time: 2020-01-13T06:25:30.149Z,
+  txcount: 1,
+  datahash:
+   '1cabb10c6fd02b966b57a8b811614f5c4a348e9874f4cc247bc6f96ee84acf88',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  9
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 9 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 9 established with 1 tx',
+  time: 2020-01-13T06:25:34.901Z,
+  txcount: 1,
+  datahash:
+   '539101f38f0efd8c1821396487274f7daac901ad44c181aefca3a964ba371f16',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  10
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 10 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 10 established with 1 tx',
+  time: 2020-01-13T06:25:39.246Z,
+  txcount: 1,
+  datahash:
+   '7e9d0a7ab16be042692948205b00892d2901c6e6895c057e09ef702ab7c10a57',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  11
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 11 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 11 established with 1 tx',
+  time: 2020-01-13T06:30:55.465Z,
+  txcount: 1,
+  datahash:
+   'a5482e4f0a3bd5f7e032e2be64ca59b2deded845d96f2b95c1bbb132a2af07de',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  12
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 12 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 12 established with 1 tx',
+  time: 2020-01-13T06:31:16.305Z,
+  txcount: 1,
+  datahash:
+   '549507b445e754039ab948476ba2b2d1b9f4a1b5d148db6fca83d0049f08f2f6',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  13
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 13 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 13 established with 1 tx',
+  time: 2020-01-13T07:36:16.156Z,
+  txcount: 1,
+  datahash:
+   '9e61f7fa1a1d62f8a2c81501e51f5de261dbc57b4b5d683667d0f70480233679',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  14
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 14 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 14 established with 1 tx',
+  time: 2020-01-13T07:36:59.858Z,
+  txcount: 1,
+  datahash:
+   'afb088ecc7f72dfd2542ec799e8d8c63efb1d9253b76d7f4d73510c1d46c7fa9',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  15
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 15 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 15 established with 1 tx',
+  time: 2020-01-13T07:37:12.400Z,
+  txcount: 1,
+  datahash:
+   '1e3f2226d328540c9b23b0a78aa410a9f9e9fc1c7f26fb2fec66b6d5928318cd',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  16
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 16 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 16 established with 1 tx',
+  time: 2020-01-13T09:34:59.378Z,
+  txcount: 1,
+  datahash:
+   '34204ea149406c2e2fb92f9954287255b5ea0764145f46d0d6e8aff60bf41dd6',
+  blksize: '4' }
+saveTransaction  true
+block_row.blocknum  17
+status  true
+{ notify_type: '4',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel',
+  title: 'Block 17 added to Channel: allchannel',
+  type: 'block',
+  message: 'Block 17 established with 1 tx',
+  time: 2020-01-13T09:35:17.843Z,
+  txcount: 1,
+  datahash:
+   'a13fd6d85d069de00e00fe2e46d74d3ddf5a463419eef855a685aeca27001a23',
+  blksize: '4' }
+initializeChannelFromDiscover  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+{ notify_type: '3',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel' }
+{ notify_type: '2',
+  network_name: 'paypro',
+  client_name: 'paypro',
+  channel_name: 'allchannel' }
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+Updating the client network and other details to DB
+SyncServices.synchNetworkConfigToDB client  paypro  channel_name  allchannel
+initializeChannelFromDiscover  allchannel
+ FabricClient.discover_results  endpoint  { host: 'orderer1.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050 
+
+ FabricClient.discover_results  endpoint  { host: 'orderer0.paypro.com', port: 7050 }
+
+initializeChannelFromDiscover.discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050 
+
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer1.paypro.com:7050
+insertNewOrderers discoveryProtocol  grpcs  requesturl  grpcs://orderer0.paypro.com:7050
+<<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>
+Error: ChannelEventHub has been shutdown
+    at ChannelEventHub.disconnect (/Users/paypro/project/hyperLedger/hyper_mh/basic-network/explorer/blockchain-explorer/node_modules/fabric-network/node_modules/fabric-client/lib/ChannelEventHub.js:610:21)
+    at FabricEvent.disconnectChannelEventHub (/Users/paypro/project/hyperLedger/hyper_mh/basic-network/explorer/blockchain-explorer/app/platform/fabric/sync/FabricEvent.js:141:19)
+    at FabricEvent.disconnectEventHubs (/Users/paypro/project/hyperLedger/hyper_mh/basic-network/explorer/blockchain-explorer/app/platform/fabric/sync/FabricEvent.js:159:10)
+    at SyncPlatform.destroy (/Users/paypro/project/hyperLedger/hyper_mh/basic-network/explorer/blockchain-explorer/app/platform/fabric/sync/SyncPlatform.js:203:18)
+    at Synchronizer.close (/Users/paypro/project/hyperLedger/hyper_mh/basic-network/explorer/blockchain-explorer/app/Synchronizer.js:85:18)
+    at process.shutDown (/Users/paypro/project/hyperLedger/hyper_mh/basic-network/explorer/blockchain-explorer/sync.js:39:16)
+    at process.emit (events.js:189:13)

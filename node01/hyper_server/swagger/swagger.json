@@ -1,0 +1,466 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Hyperledger Explorer REST API Swagger",
+        "description": "Rest API ",
+        "contact": {
+            "name": "paypro Team"
+        },
+        "version": "1.0.0",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3010"
+        },
+        {
+            "url": "https://localhost:3010"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "tags": [
+        {
+            "name": "admin",
+            "description": "admin api"
+        },
+        {
+            "name": "chaincode",
+            "description": "chaincode query and invoke"
+        },
+        {
+            "name": "hyper",
+            "description": " query fron hyperledger network"
+        },
+        {
+            "name": "fromDb",
+            "description": "query from mysql Database"
+        }
+    ],
+    "paths": {
+        "/api/admin": {
+            "get": {
+                "tags": [
+                    "admin"
+                ],
+                "summary": "admin key generate",
+                "operationId": "admin",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/insertUserTx": {
+            "post": {
+                "tags": [
+                    "chaincode"
+                ],
+                "summary": "invoke user Tx",
+                "operationId": "insertUserTx",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/insertUserTx"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/selectAllUser": {
+            "post": {
+                "tags": [
+                    "chaincode"
+                ],
+                "summary": "invoke user Tx",
+                "operationId": "selectAllUser",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/selectAllUser"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/selectUserTx": {
+            "post": {
+                "tags": [
+                    "chaincode"
+                ],
+                "summary": "invoke user Tx",
+                "operationId": "selectUserTx",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/selectUserTx"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/getBlockHeight": {
+            "post": {
+                "tags": [
+                    "hyper"
+                ],
+                "summary": "get block Height",
+                "operationId": "getBlockHeight",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/getBlockInfo": {
+            "post": {
+                "tags": [
+                    "hyper"
+                ],
+                "summary": "get block info by blocknum",
+                "operationId": "getBlockInfo",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/getBlockInfo"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/getTransaction": {
+            "post": {
+                "tags": [
+                    "hyper"
+                ],
+                "summary": "get Transaction by txhash",
+                "operationId": "getTransaction",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/getTransaction"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/selectBlockInfoByHash": {
+            "post": {
+                "tags": [
+                    "hyper"
+                ],
+                "summary": "get blockInfo by blockhash",
+                "operationId": "selectBlockInfoByHash",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/selectBlockInfoByHash"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/pagingTx": {
+            "post": {
+                "tags": [
+                    "fromDb"
+                ],
+                "summary": "transaction paging",
+                "operationId": "pagingTx",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/pagingTx"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/pagingBlock": {
+            "post": {
+                "tags": [
+                    "fromDb"
+                ],
+                "summary": "block paging",
+                "operationId": "pagingBlock",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/pagingBlock"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/selectTodayTx": {
+            "post": {
+                "tags": [
+                    "fromDb"
+                ],
+                "summary": "select today transaction count",
+                "operationId": "selectTodayTx",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/query/selectdaysInfo": {
+            "post": {
+                "tags": [
+                    "fromDb"
+                ],
+                "summary": "select 8days counting tx and spending coin_quantity",
+                "operationId": "selectdaysInfo",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {}
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "insertUserTx": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example":"1"
+                },
+                "user_id": {
+                    "type": "string",
+                    "example":"example@paypro.co.kr"
+                },
+                "merchant": {
+                    "type": "string",
+                    "example":"삼성"
+                },
+                "symbol": {
+                    "type": "string",
+                    "example":"h3c"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "example":100
+                }
+            }
+        },
+        "selectAllUser": {
+            "type": "object",
+            "properties": {
+                "symbol": {
+                    "type": "string"
+                }
+            }
+        },
+        "selectUserTx": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "symbol": {
+                    "type": "string"
+                }
+            }
+        },
+        "getBlockInfo": {
+            "type": "object",
+            "properties": {
+                "blockNum": {
+                    "type": "string"
+                }
+            }
+        },
+        "getTransaction": {
+            "type": "object",
+            "properties": {
+                "tx": {
+                    "type": "string"
+                }
+            }
+        },
+        "selectBlockInfoByHash": {
+            "type": "object",
+            "properties": {
+                "blockHash": {
+                    "type": "string"
+                }
+            }
+        },
+        "pagingTx": {
+            "type": "object",
+            "properties": {
+                "pageNum": {
+                    "type": "string"
+                }
+            }
+        },
+        "pagingBlock": {
+            "type": "object",
+            "properties": {
+                "pageNum": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

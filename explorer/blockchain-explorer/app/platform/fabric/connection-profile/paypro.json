@@ -1,0 +1,151 @@
+{
+	"name": "paypro",
+	"x-type": "hlfv1.1",
+	"version": "1.0",
+	"client": {
+		"tlsEnable": true,
+		"adminUser": "admin",
+		"adminPassword": "adminpw",
+		"organization": "Org1"
+	},
+	"channels": {
+		"allchannel": {
+			"orderers": ["orderer0.paypro.com", "orderer1.paypro.com"],
+			"peers": {
+				"peer0.h3c.paypro.com": {
+					"endorsingPeer": true,
+					"chaincodeQuery": true,
+					"ledgerQuery": true,
+					"eventSource": true
+				},
+				"peer0.mija.paypro.com": {
+					"endorsingPeer": true,
+					"chaincodeQuery": true,
+					"ledgerQuery": true,
+					"eventSource": true
+				},
+				"peer0.yapyap.paypro.com": {
+					"endorsingPeer": true,
+					"chaincodeQuery": true,
+					"ledgerQuery": true,
+					"eventSource": true
+				}
+			}
+		}
+	},
+	"organizations": {
+		"Org1": {
+			"mspid": "h3cMSP",
+			"fullpath": true,
+			"peers": ["peer0.h3c.paypro.com"],
+			"certificateAuthorities": ["ca.h3c.paypro.com"],
+			"adminPrivateKey": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/h3c.paypro.com/users/Admin@h3c.paypro.com/msp/keystore/5f47a044f5726c69b18972b22ada32f3a3e1c0b1a06276b038586a1dbc2c6bfc_sk"
+			},
+			"signedCert": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/h3c.paypro.com/users/Admin@h3c.paypro.com/msp/signcerts/Admin@h3c.paypro.com-cert.pem"
+			}
+		},
+		"Org2": {
+			"mspid": "mijaMSP",
+			"fullpath": true,
+			"peers": ["peer0.mija.paypro.com"],
+			"certificateAuthorities": ["ca.h3c.paypro.com"],
+			"adminPrivateKey": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/mija.paypro.com/users/Admin@mija.paypro.com/msp/keystore/0536e101289955dbfbecf84051c502ac47032ae861648bcf01e9197ef799345d_sk"
+			},
+			"signedCert": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/mija.paypro.com/users/Admin@mija.paypro.com/msp/signcerts/Admin@mija.paypro.com-cert.pem"
+			}
+		},
+		"Org3": {
+			"mspid": "yapyapMSP",
+			"fullpath": true,
+			"peers": ["peer0.yapyap.paypro.com"],
+			"certificateAuthorities": ["ca.h3c.paypro.com"],
+			"adminPrivateKey": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/yapyap.paypro.com/users/Admin@yapyap.paypro.com/msp/keystore/bb51854b19a2bf9ba3f61347a156af968b301c0b383bf30146e54c704749717a_sk"
+			},
+			"signedCert": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/yapyap.paypro.com/users/Admin@yapyap.paypro.com/msp/signcerts/Admin@yapyap.paypro.com-cert.pem"
+			}
+		}
+	},
+
+	"peers": {
+		"peer0.h3c.paypro.com": {
+			"url": "grpcs://localhost:7051",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.h3c.paypro.com",
+				"grpc.http2.keepalive_time": 15
+			},
+			"tlsCACerts": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/h3c.paypro.com/peers/peer0.h3c.paypro.com/tls/server.crt"
+			}
+		},
+		"peer0.mija.paypro.com": {
+			"url": "grpcs://localhost:8051",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.mija.paypro.com",
+				"grpc.http2.keepalive_time": 15
+			},
+			"tlsCACerts": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/mija.paypro.com/peers/peer0.mija.paypro.com/tls/server.crt"
+			}
+		},
+		"peer0.yapyap.paypro.com": {
+			"url": "grpcs://localhost:9051",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.yapyap.paypro.com",
+				"grpc.http2.keepalive_time": 15
+			},
+			"tlsCACerts": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/yapyap.paypro.com/peers/peer0.yapyap.paypro.com/tls/server.crt"
+			}
+		}
+	},
+	"orderers": {
+		"orderer0.paypro.com": {
+			"mspid": "OrdererPayproMSP",
+			"url": "grpcs://localhost:7050",
+			"grpcOptions": {
+				"ssl-target-name-override": "orderer0.paypro.com",
+				"grpc-max-send-message-length": -1,
+				"grpc.keepalive_time_ms": 360000,
+				"grpc.keepalive_timeout_ms": 180000
+			},
+			"tlsCACerts": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/ordererOrganizations/paypro.com/orderers/orderer0.paypro.com/tls/ca.crt"
+			}
+		},
+		"orderer1.paypro.com": {
+			"mspid": "OrdererPayproMSP",
+			"url": "grpcs://localhost:8050",
+			"grpcOptions": {
+				"ssl-target-name-override": "orderer1.paypro.com",
+				"grpc-max-send-message-length": -1,
+				"grpc.keepalive_time_ms": 360000,
+				"grpc.keepalive_timeout_ms": 180000
+			},
+			"tlsCACerts": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/ordererOrganizations/paypro.com/orderers/orderer1.paypro.com/tls/ca.crt"
+			}
+		}
+	},
+	"certificateAuthorities": {
+		"ca.h3c.paypro.com": {
+			"url": "https://localhost:7054",
+			"httpOptions": {
+				"verify": false
+			},
+			"registrar": {
+				"enrollId": "admin",
+				"enrollSecret": "adminpw"
+			},
+			"tlsCACerts": {
+				"path": "/Users/paypro/project/hyperLedger/hyper_mh/basic-network/crypto-config/peerOrganizations/h3c.paypro.com/ca/ca.h3c.paypro.com-cert.pem"
+			},
+			"caName": "ca.h3c.paypro.com"
+		}
+	}
+}

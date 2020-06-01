@@ -1,0 +1,50 @@
+const Sequelize = require('sequelize');
+const db = require('../db')
+
+module.exports = db.sequelize.define('hyper_Transactions',{
+    index:{
+        type:Sequelize.INTEGER,
+        primaryKey:true,
+        autoIncrement:true
+    },
+    tx_hash:{
+        type:Sequelize.STRING,
+        unique:true,
+        allowNull:false
+    },
+    key:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    merchant:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    symbol:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    quantity:{
+        type:Sequelize.INTEGER,
+        allowNull:false
+    },
+    timestamp:{
+        type:Sequelize.DATE,
+        allowNull:false
+    },
+    timestamp_kst:{
+        type:Sequelize.DATE,
+        allowNull:false
+    },
+    channel_id:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    creator:{
+        type:Sequelize.STRING,
+        allowNull:false
+    }
+},{
+    freezeTableName:true,
+}
+)

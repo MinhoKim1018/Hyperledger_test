@@ -1,0 +1,16 @@
+[2020-01-15 10:37:22.139] [INFO] PgService - SSL to Postgresql disabled
+[2020-01-15 10:37:22.139] [INFO] PgService - connecting to Postgresql postgres://hppoc:******@127.0.0.1:5432/fabricexplorer
+[2020-01-15 10:37:22.140] [INFO] PgService - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2020-01-15 10:37:24.661] [DEBUG] PgService -  the getRowsBySQlCase  select * from channel where name='allchannel' and channel_genesis_hash='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' 
+[2020-01-15 10:37:24.681] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' and server_hostname='peer0.h3c.paypro.com' 
+[2020-01-15 10:37:24.682] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'peer0.h3c.paypro.com' and prc.channelid='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' 
+[2020-01-15 10:37:24.684] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' and server_hostname='orderer1.paypro.com' 
+[2020-01-15 10:37:24.685] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer1.paypro.com' and prc.channelid='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' 
+[2020-01-15 10:37:24.686] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' and server_hostname='orderer0.paypro.com' 
+[2020-01-15 10:37:24.687] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer0.paypro.com' and prc.channelid='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' 
+[2020-01-15 10:37:24.702] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from chaincodes where name='h3c' and
+        channel_genesis_hash='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' and version='1.0' and path='/opt/gopath/src/github.com/userTxH3C'
+[2020-01-15 10:37:24.703] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from peer_ref_chaincode prc where prc.peerid= 'peer0.h3c.paypro.com' and prc.chaincodeid='h3c' and cc_version='1.0' and channelid='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8'
+[2020-01-15 10:37:24.725] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from transactions where blockid='18' and txhash='ec8d3770aaf30e07f5bdf3b3ed4b746facc350f875b1e33cb148358649fc6c86' and channel_genesis_hash='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8'
+[2020-01-15 10:37:24.727] [DEBUG] PgService -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='18' and txcount='1'
+        and channel_genesis_hash='38b8d146cc2322df2164987e2613b2b0544be03341032d2d525163c1243265f8' and prehash='ec4871b09e2e9186332f8e489609ef3539369e84e6b67a5d3595a7951c45c94d' and datahash='06ac57b5e7aed0e59d63bf86137894c2c9269d9f6c3c0cd871bf96feb212ba6f' 

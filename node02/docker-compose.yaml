@@ -1,0 +1,187 @@
+#
+# Copyright IBM Corp All Rights Reserved
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+version: '3.4'
+
+volumes:
+  orderer1.paypro.com:
+  peer0.yapyap.paypro.com:
+  peer0.mija.paypro.com:
+
+networks:
+  minho:
+    external:
+      name: minho
+
+services:
+  orderer1.paypro.com:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peexr0.h3c.paypro.com
+    container_name: orderer1.paypro.com
+    image: hyperledger/fabric-orderer
+    environment:
+      - FABRIC_LOGGING_SPEC=info
+      - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+      - ORDERER_GENERAL_GENESISMETHOD=file
+      - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block
+      - ORDERER_GENERAL_LOCALMSPID=OrdererPayproMSP
+      - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
+      # enabled TLS
+      - ORDERER_GENERAL_TLS_ENABLED=true
+      - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+      - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+      - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
+      - ORDERER_KAFKA_TOPIC_REPLICATIONFACTOR=1
+
+      - ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+      - ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+      - ORDERER_GENERAL_CLUSTER_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
+
+      - ORDERER_KAFKA_VERBOSE=true
+      - ORDERER_KAFKA_RETRY_SHOUTINTERVAL=1s
+      - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
+    command: orderer
+    ports:
+      - published: 7050
+        target: 7050
+        mode: host
+
+    volumes:
+        - /var/run/:/host/var/run/
+        - ./config/:/etc/hyperledger/configtx
+        - ./crypto-config/ordererOrganizations/paypro.com/orderers/orderer1.paypro.com/:/etc/hyperledger/msp/orderer
+        - ./crypto-config/peerOrganizations/h3c.paypro.com/peers/peer0.h3c.paypro.com/:/etc/hyperledger/msp/peerh3c
+        - ./crypto-config/peerOrganizations/mija.paypro.com/peers/peer0.mija.paypro.com/:/etc/hyperledger/msp/peermija
+        - ./crypto-config/peerOrganizations/yapyap.paypro.com/peers/peer0.yapyap.paypro.com/:/etc/hyperledger/msp/peeryapyap
+        - orderer1.paypro.com:/var/hyperledger/production/orderer
+    networks:
+      minho:
+        aliases:
+          - orderer1.paypro.com
+
+  peer0.mija.paypro.com:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+    container_name: peer0.mija.paypro.com
+    image: hyperledger/fabric-peer
+    environment:
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=minho
+      - FABRIC_LOGGING_SPEC=info
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_PROFILE_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+
+      - CORE_PEER_ID=peer0.mija.paypro.com
+      - CORE_PEER_ADDRESS=peer0.mija.paypro.com:8051
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:8051
+      - CORE_PEER_CHAINCODEADDRESS=peer0.mija.paypro.com:8052
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:8052
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.mija.paypro.com:8051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.mija.paypro.com:8051
+      # - CORE_CHAINCODE_LOGGING_LEVEL=info
+      - CORE_PEER_LOCALMSPID=mijaMSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/
+
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+    command: peer node start
+    ports:
+      - published: 8051
+        target: 8051
+        mode: host
+      - published: 8053
+        target: 8053
+        mode: host
+    volumes:
+        - /var/run/:/host/var/run/
+        - ./crypto-config/peerOrganizations/mija.paypro.com/peers/peer0.mija.paypro.com/msp:/etc/hyperledger/msp/peer
+        - ./crypto-config/peerOrganizations/mija.paypro.com/users:/etc/hyperledger/msp/users
+        - ./crypto-config/peerOrganizations/mija.paypro.com/peers/peer0.mija.paypro.com/tls:/etc/hyperledger/fabric/tls
+        - ./config:/etc/hyperledger/configtx
+        - peer0.mija.paypro.com:/var/hyperledger/production
+    networks:
+      minho:
+        aliases:
+          - peer0.mija.paypro.com
+
+  peer0.yapyap.paypro.com:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+    container_name: peer0.yapyap.paypro.com
+    image: hyperledger/fabric-peer
+    environment:
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=minho
+      - FABRIC_LOGGING_SPEC=info
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_PROFILE_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
+
+      - CORE_PEER_ID=peer0.yapyap.paypro.com
+      - CORE_PEER_ADDRESS=peer0.yapyap.paypro.com:9051
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:9051
+      - CORE_PEER_CHAINCODEADDRESS=peer0.yapyap.paypro.com:9052
+      - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:9052
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.yapyap.paypro.com:9051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.yapyap.paypro.com:9051
+      # - CORE_CHAINCODE_LOGGING_LEVEL=info
+      - CORE_PEER_LOCALMSPID=yapyapMSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/msp/peer/
+
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric
+    command: peer node start
+    ports:
+      - published: 9051
+        target: 9051
+        mode: host
+      - published: 9053
+        target: 9053
+        mode: host
+    volumes:
+        - /var/run/:/host/var/run/
+        - ./crypto-config/peerOrganizations/yapyap.paypro.com/peers/peer0.yapyap.paypro.com/msp:/etc/hyperledger/msp/peer
+        - ./crypto-config/peerOrganizations/yapyap.paypro.com/users:/etc/hyperledger/msp/users
+        - ./crypto-config/peerOrganizations/yapyap.paypro.com/peers/peer0.yapyap.paypro.com/tls:/etc/hyperledger/fabric/tls
+        - ./config:/etc/hyperledger/configtx
+        - peer0.yapyap.paypro.com:/var/hyperledger/production
+    networks:
+      minho:
+        aliases:
+          - peer0.yapyap.paypro.com

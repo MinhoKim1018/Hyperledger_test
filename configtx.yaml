@@ -1,0 +1,190 @@
+
+Organizations:
+
+    - &OrdererOrg
+        Name: OrdererPaypro
+        ID: OrdererPayproMSP
+        MSPDir: crypto-config/ordererOrganizations/paypro.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('OrdererPayproMSP.member')"
+            Writers:
+                Type: Signature
+                Rule: "OR('OrdererPayproMSP.member')"
+            Admins:
+                Type: Signature
+                Rule: "OR('OrdererPayproMSP.admin')"
+
+    - &Org1
+        Name: h3cMSP
+        ID: h3cMSP
+        MSPDir: crypto-config/peerOrganizations/h3c.paypro.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('h3cMSP.member')"
+            Writers:
+                Type: Signature
+                Rule: "OR('h3cMSP.member')"
+            Admins:
+                Type: Signature
+                Rule: "OR('h3cMSP.admin')"
+        AnchorPeers:
+            - Host: peer0.h3c.paypro.com
+              Port: 7051
+
+    - &Org2
+        Name: mijaMSP
+        ID: mijaMSP
+        MSPDir: crypto-config/peerOrganizations/mija.paypro.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('mijaMSP.member')"
+            Writers:
+                Type: Signature
+                Rule: "OR('mijaMSP.member')"
+            Admins:
+                Type: Signature
+                Rule: "OR('mijaMSP.admin')"
+        AnchorPeers:
+            - Host: peer0.mija.paypro.com
+              Port: 8051
+
+    - &Org3
+        Name: yapyapMSP
+        ID: yapyapMSP
+        MSPDir: crypto-config/peerOrganizations/yapyap.paypro.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('yapyapMSP.member')"
+            Writers:
+                Type: Signature
+                Rule: "OR('yapyapMSP.member')"
+            Admins:
+                Type: Signature
+                Rule: "OR('yapyapMSP.admin')"
+        AnchorPeers:
+            - Host: peer0.yapyap.paypro.com
+              Port: 9051
+
+
+Capabilities:
+    Channel: &ChannelCapabilities
+        V1_4_3: true
+        V1_3: true   ##
+        V1_1: false
+
+    Orderer: &OrdererCapabilities
+        V1_4_2: true
+        V1_1: true
+
+    Application: &ApplicationCapabilities
+        V1_4_2: true
+        V1_3: true
+        V1_2: false
+        V1_1: false
+
+Application: &ApplicationDefaults
+    Organizations:
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+
+    Capabilities:
+        <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+    OrdererType: kafka
+    Addresses:
+        - orderer1.paypro.com:7050
+        - orderer0.paypro.com:7050
+    BatchTimeout: 0.5s
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+    Kafka:
+        Brokers:
+            - kafka0.paypro.com:9092
+            - kafka1.paypro.com:9092
+            - kafka2.paypro.com:9092
+            - kafka3.paypro.com:9092
+    Organizations:
+
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        BlockValidation:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+
+Channel: &ChannelDefaults
+
+    Policies:
+
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+
+    Capabilities:
+        <<: *ChannelCapabilities
+
+Profiles:
+
+    PayproOrdererGenesis:
+        <<: *ChannelDefaults
+        Orderer:
+            <<: *OrdererDefaults
+            # OrdererType: kafka
+            # Kafka:
+            #     Brokers:
+            #     - kafka.example.com:9092
+            Organizations:
+                - *OrdererOrg
+            Capabilities:
+                <<: *OrdererCapabilities
+        # Application:
+        #     <<: *ApplicationDefaults
+        #     Organizations:
+        #     - <<: *OrdererOrg
+        Consortiums:
+            PayproConsortium:
+                Organizations:
+                    - *Org1
+                    - *Org2
+                    - *Org3
+    AllChannel:
+        Consortium: PayproConsortium
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *Org1
+                - *Org2
+                - *Org3
+            Capabilities:
+                <<: *ApplicationCapabilities
+
+   

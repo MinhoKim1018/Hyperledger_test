@@ -1,0 +1,32 @@
+
+OrdererOrgs:
+  - Name: OrdererPaypro
+    Domain: paypro.com
+    EnableNodeOUs: true 
+    Template:
+      Count: 2
+
+PeerOrgs:
+  - Name: h3c
+    Domain: h3c.paypro.com
+    Template:
+      Count: 1  
+    Users:
+      Count: 1
+
+  - Name: mija
+    Domain: mija.paypro.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+
+  - Name: yapyap
+    Domain: yapyap.paypro.com
+    Template:
+      Count: 1  
+    Users:
+      Count: 1
+
+#명령어
+#cryptogen generate --config=./crypto-config.yaml

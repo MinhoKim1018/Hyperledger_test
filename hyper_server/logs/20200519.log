@@ -1,0 +1,434 @@
+2020-05-19 18:12:42 info: insertUserTx To Hyper
+2020-05-19 18:12:42 info: Successfully loaded admin from persistence
+2020-05-19 18:12:42 info: Assigning transaction_id: 
+2020-05-19 18:12:42 error: Transaction proposal was bad
+2020-05-19 18:12:42 error: Error: 2 UNKNOWN: access denied: channel [allchannel] creator org [h3cMSP]
+2020-05-19 18:12:42 error: Failed to send Proposal or receive valid response. Response null or status is not 200. exiting...
+2020-05-19 18:12:42 error: Failed to invoke successfully :: Error: Failed to send Proposal or receive valid response. Response null or status is not 200. exiting...
+2020-05-19 18:13:00 info: ############# crontab START ##################
+2020-05-19 18:13:00 info: Successfully loaded admin from persistence
+2020-05-19 18:13:00 error: Error: 2 UNKNOWN: access denied: channel [allchannel] creator org [h3cMSP]
+2020-05-19 18:13:00 error: [object Object]
+2020-05-19 18:13:00 info: Current Block Height : undefined
+2020-05-19 18:13:00 info: ############# crontab END ################## 
+
+2020-05-19 18:15:00 info: ############# crontab START ##################
+2020-05-19 18:15:00 error: Failed to get admin.... run registerUser.js
+2020-05-19 18:15:00 error: [object Object]
+2020-05-19 18:15:00 info: Current Block Height : undefined
+2020-05-19 18:15:00 info: ############# crontab END ################## 
+
+2020-05-19 18:26:56 info: insertUserTx To Hyper
+2020-05-19 18:26:56 info: Successfully loaded admin from persistence
+2020-05-19 18:26:56 info: Assigning transaction_id: 
+2020-05-19 18:26:56 error: Transaction proposal was bad
+2020-05-19 18:26:56 error: Error: make sure the chaincode h3e has been successfully instantiated and try again: chaincode h3e not found
+2020-05-19 18:26:56 error: Failed to send Proposal or receive valid response. Response null or status is not 200. exiting...
+2020-05-19 18:26:56 error: Failed to invoke successfully :: Error: Failed to send Proposal or receive valid response. Response null or status is not 200. exiting...
+2020-05-19 18:27:00 info: ############# crontab START ##################
+2020-05-19 18:27:00 info: Successfully loaded admin from persistence
+2020-05-19 18:27:00 info: Query has completed, checking results
+2020-05-19 18:27:00 info: Current Block Height : 2
+2020-05-19 18:27:00 info: Successfully loaded admin from persistence
+2020-05-19 18:27:00 info: Query has completed, checking results
+2020-05-19 18:27:00 info: {"block_num":"1","previous_hash":"71601de6b5c9bc1fcb7ef9dc304c88699b70738c365e62ab30acfd563063c807","data_hash":"14aa66008bd5a213f46b50a44acf74a450b1286a12121a0c78591c576c905fbd","tx_id":"cbaae985181940390032b2009186c849f50f349e48175ac40d38ecf0c4dbd63e","timestamp":"2020-05-19T09:25:43.221Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"h3c","is_delete":false,"value":"\n\u0003h3c\u0012\u00031.0\u001a\u0004escc\"\u0004vscc*\u0016\u0012\b\u0012\u0006\b\u0001\u0012\u0002\b\u0000\u001a\n\u0012\b\n\u0006h3cMSP2D\n �\u0010X�2ڊ�]t\u0019Eu�]�\u0015��N�ݷ)d�MS��\t\u0012 �\u0006'c��=9�<oe\nCO���t�/H\r������J): �����4�Pk!��\u001b�/O�DA�Mo\t�:�Q\f�\u0007B@\u0012\u0010\u0012\u000e\b\u0001\u0012\u0002\b\u0000\u0012\u0002\b\u0001\u0012\u0002\b\u0002\u001a\f\u0012\n\n\u0006h3cMSP\u0010\u0001\u001a\r\u0012\u000b\n\u0007mijaMSP\u0010\u0001\u001a\u000f\u0012\r\n\tyapyapMSP\u0010\u0001"}],"response":200}
+2020-05-19 18:27:00 info: ############# crontab END ################## 
+
+2020-05-19 18:28:18 info: insertUserTx To Hyper
+2020-05-19 18:28:18 info: Successfully loaded admin from persistence
+2020-05-19 18:28:18 info: Assigning transaction_id: 
+2020-05-19 18:28:18 info: Transaction proposal was good
+2020-05-19 18:28:18 info: Successfully sent Proposal and received ProposalResponse: Status - 200, message - ""
+2020-05-19 18:28:19 info: The transaction has been committed on peer localhost:7051
+2020-05-19 18:28:19 info: Send transaction promise and event listener promise have completed
+2020-05-19 18:28:19 info: Successfully sent transaction to the orderer.
+2020-05-19 18:28:19 info: Successfully committed the change to the ledger by the peer
+2020-05-19 18:28:19 info: {"result":1,"msg":"successed","tx_id":"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a"}
+
+2020-05-19 18:29:00 info: ############# crontab START ##################
+2020-05-19 18:29:00 info: Successfully loaded admin from persistence
+2020-05-19 18:29:00 info: Query has completed, checking results
+2020-05-19 18:29:00 info: Current Block Height : 3
+2020-05-19 18:29:00 info: Successfully loaded admin from persistence
+2020-05-19 18:29:00 info: Query has completed, checking results
+2020-05-19 18:29:00 info: {"block_num":"1","previous_hash":"71601de6b5c9bc1fcb7ef9dc304c88699b70738c365e62ab30acfd563063c807","data_hash":"14aa66008bd5a213f46b50a44acf74a450b1286a12121a0c78591c576c905fbd","tx_id":"cbaae985181940390032b2009186c849f50f349e48175ac40d38ecf0c4dbd63e","timestamp":"2020-05-19T09:25:43.221Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"h3c","is_delete":false,"value":"\n\u0003h3c\u0012\u00031.0\u001a\u0004escc\"\u0004vscc*\u0016\u0012\b\u0012\u0006\b\u0001\u0012\u0002\b\u0000\u001a\n\u0012\b\n\u0006h3cMSP2D\n �\u0010X�2ڊ�]t\u0019Eu�]�\u0015��N�ݷ)d�MS��\t\u0012 �\u0006'c��=9�<oe\nCO���t�/H\r������J): �����4�Pk!��\u001b�/O�DA�Mo\t�:�Q\f�\u0007B@\u0012\u0010\u0012\u000e\b\u0001\u0012\u0002\b\u0000\u0012\u0002\b\u0001\u0012\u0002\b\u0002\u001a\f\u0012\n\n\u0006h3cMSP\u0010\u0001\u001a\r\u0012\u000b\n\u0007mijaMSP\u0010\u0001\u001a\u000f\u0012\r\n\tyapyapMSP\u0010\u0001"}],"response":200}
+2020-05-19 18:29:00 info: Successfully loaded admin from persistence
+2020-05-19 18:29:00 info: Query has completed, checking results
+2020-05-19 18:29:00 info: {"block_num":"2","previous_hash":"8c6e6fabe5d22c67d4600517b56051b862b71b731312ef828d798ad0ffb8bc5a","data_hash":"f17f88785a33de919d5616c58f8ac8265b60b56c08de6eb3f2470d7a87c8d9d4","tx_id":"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a","timestamp":"2020-05-19T09:28:18.820Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00001","is_delete":false,"value":"{\"init\":\"example@paypro.co.kr\"}"},{"key":"USER_00001_0","is_delete":false,"value":"{\"tx_id\":\"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a\",\"merchant\":\"삼성\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:29:00 info: ############# crontab END ################## 
+
+2020-05-19 18:29:21 info: selectAllUser from Hyper
+2020-05-19 18:29:21 info: Successfully loaded admin from persistence
+2020-05-19 18:29:22 info: Query has completed, checking results
+2020-05-19 18:29:22 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"}]
+2020-05-19 18:29:22 info: Response is 
+2020-05-19 18:29:22 info: [object Object]
+
+2020-05-19 18:29:29 info: selectAllUser from Hyper
+2020-05-19 18:29:29 info: Successfully loaded admin from persistence
+2020-05-19 18:29:29 info: Query has completed, checking results
+2020-05-19 18:29:29 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"}]
+2020-05-19 18:29:29 info: Response is 
+2020-05-19 18:29:29 info: [object Object]
+
+2020-05-19 18:29:46 info: insertUserTx To Hyper
+2020-05-19 18:29:46 info: Successfully loaded admin from persistence
+2020-05-19 18:29:46 info: Assigning transaction_id: 
+2020-05-19 18:29:46 info: Transaction proposal was good
+2020-05-19 18:29:46 info: Successfully sent Proposal and received ProposalResponse: Status - 200, message - ""
+2020-05-19 18:29:46 info: The transaction has been committed on peer localhost:7051
+2020-05-19 18:29:46 info: Send transaction promise and event listener promise have completed
+2020-05-19 18:29:46 info: Successfully sent transaction to the orderer.
+2020-05-19 18:29:46 info: Successfully committed the change to the ledger by the peer
+2020-05-19 18:29:46 info: {"result":1,"msg":"successed","tx_id":"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4"}
+
+2020-05-19 18:29:51 info: selectAllUser from Hyper
+2020-05-19 18:29:51 info: Successfully loaded admin from persistence
+2020-05-19 18:29:51 info: Query has completed, checking results
+2020-05-19 18:29:51 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:29:51 info: Response is 
+2020-05-19 18:29:51 info: [object Object],[object Object]
+
+2020-05-19 18:30:00 info: ############# crontab START ##################
+2020-05-19 18:30:00 info: Successfully loaded admin from persistence
+2020-05-19 18:30:00 info: Query has completed, checking results
+2020-05-19 18:30:00 info: Current Block Height : 4
+2020-05-19 18:30:00 info: Successfully loaded admin from persistence
+2020-05-19 18:30:00 info: Query has completed, checking results
+2020-05-19 18:30:00 info: {"block_num":"1","previous_hash":"71601de6b5c9bc1fcb7ef9dc304c88699b70738c365e62ab30acfd563063c807","data_hash":"14aa66008bd5a213f46b50a44acf74a450b1286a12121a0c78591c576c905fbd","tx_id":"cbaae985181940390032b2009186c849f50f349e48175ac40d38ecf0c4dbd63e","timestamp":"2020-05-19T09:25:43.221Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"h3c","is_delete":false,"value":"\n\u0003h3c\u0012\u00031.0\u001a\u0004escc\"\u0004vscc*\u0016\u0012\b\u0012\u0006\b\u0001\u0012\u0002\b\u0000\u001a\n\u0012\b\n\u0006h3cMSP2D\n �\u0010X�2ڊ�]t\u0019Eu�]�\u0015��N�ݷ)d�MS��\t\u0012 �\u0006'c��=9�<oe\nCO���t�/H\r������J): �����4�Pk!��\u001b�/O�DA�Mo\t�:�Q\f�\u0007B@\u0012\u0010\u0012\u000e\b\u0001\u0012\u0002\b\u0000\u0012\u0002\b\u0001\u0012\u0002\b\u0002\u001a\f\u0012\n\n\u0006h3cMSP\u0010\u0001\u001a\r\u0012\u000b\n\u0007mijaMSP\u0010\u0001\u001a\u000f\u0012\r\n\tyapyapMSP\u0010\u0001"}],"response":200}
+2020-05-19 18:30:00 info: Successfully loaded admin from persistence
+2020-05-19 18:30:00 info: Query has completed, checking results
+2020-05-19 18:30:00 info: {"block_num":"2","previous_hash":"8c6e6fabe5d22c67d4600517b56051b862b71b731312ef828d798ad0ffb8bc5a","data_hash":"f17f88785a33de919d5616c58f8ac8265b60b56c08de6eb3f2470d7a87c8d9d4","tx_id":"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a","timestamp":"2020-05-19T09:28:18.820Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00001","is_delete":false,"value":"{\"init\":\"example@paypro.co.kr\"}"},{"key":"USER_00001_0","is_delete":false,"value":"{\"tx_id\":\"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a\",\"merchant\":\"삼성\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:30:00 info: Successfully loaded admin from persistence
+2020-05-19 18:30:00 info: Query has completed, checking results
+2020-05-19 18:30:00 info: {"block_num":"3","previous_hash":"644773feb5c4183a9cacdefe459773fa3705bcea77ca47cf0f407d270a722ba4","data_hash":"62d749619166603f3622e025fd87b8a2f6e734a1c7e1ef4673a87e00b7c05a68","tx_id":"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4","timestamp":"2020-05-19T09:29:46.276Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00002","is_delete":false,"value":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"key":"USER_00002_0","is_delete":false,"value":"{\"tx_id\":\"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4\",\"merchant\":\"삼성\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:30:00 info: ############# crontab END ################## 
+
+2020-05-19 18:31:00 info: ############# crontab START ##################
+2020-05-19 18:31:00 info: Successfully loaded admin from persistence
+2020-05-19 18:31:00 info: Query has completed, checking results
+2020-05-19 18:31:00 info: Current Block Height : 4
+2020-05-19 18:31:00 info: Successfully loaded admin from persistence
+2020-05-19 18:31:00 info: Query has completed, checking results
+2020-05-19 18:31:00 info: {"block_num":"1","previous_hash":"71601de6b5c9bc1fcb7ef9dc304c88699b70738c365e62ab30acfd563063c807","data_hash":"14aa66008bd5a213f46b50a44acf74a450b1286a12121a0c78591c576c905fbd","tx_id":"cbaae985181940390032b2009186c849f50f349e48175ac40d38ecf0c4dbd63e","timestamp":"2020-05-19T09:25:43.221Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"h3c","is_delete":false,"value":"\n\u0003h3c\u0012\u00031.0\u001a\u0004escc\"\u0004vscc*\u0016\u0012\b\u0012\u0006\b\u0001\u0012\u0002\b\u0000\u001a\n\u0012\b\n\u0006h3cMSP2D\n �\u0010X�2ڊ�]t\u0019Eu�]�\u0015��N�ݷ)d�MS��\t\u0012 �\u0006'c��=9�<oe\nCO���t�/H\r������J): �����4�Pk!��\u001b�/O�DA�Mo\t�:�Q\f�\u0007B@\u0012\u0010\u0012\u000e\b\u0001\u0012\u0002\b\u0000\u0012\u0002\b\u0001\u0012\u0002\b\u0002\u001a\f\u0012\n\n\u0006h3cMSP\u0010\u0001\u001a\r\u0012\u000b\n\u0007mijaMSP\u0010\u0001\u001a\u000f\u0012\r\n\tyapyapMSP\u0010\u0001"}],"response":200}
+2020-05-19 18:31:00 info: Successfully loaded admin from persistence
+2020-05-19 18:31:00 info: Query has completed, checking results
+2020-05-19 18:31:00 info: {"block_num":"2","previous_hash":"8c6e6fabe5d22c67d4600517b56051b862b71b731312ef828d798ad0ffb8bc5a","data_hash":"f17f88785a33de919d5616c58f8ac8265b60b56c08de6eb3f2470d7a87c8d9d4","tx_id":"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a","timestamp":"2020-05-19T09:28:18.820Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00001","is_delete":false,"value":"{\"init\":\"example@paypro.co.kr\"}"},{"key":"USER_00001_0","is_delete":false,"value":"{\"tx_id\":\"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a\",\"merchant\":\"삼성\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:31:00 info: Successfully loaded admin from persistence
+2020-05-19 18:31:00 info: Query has completed, checking results
+2020-05-19 18:31:00 info: {"block_num":"3","previous_hash":"644773feb5c4183a9cacdefe459773fa3705bcea77ca47cf0f407d270a722ba4","data_hash":"62d749619166603f3622e025fd87b8a2f6e734a1c7e1ef4673a87e00b7c05a68","tx_id":"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4","timestamp":"2020-05-19T09:29:46.276Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00002","is_delete":false,"value":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"key":"USER_00002_0","is_delete":false,"value":"{\"tx_id\":\"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4\",\"merchant\":\"삼성\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:31:00 info: ############# crontab END ################## 
+
+2020-05-19 18:32:00 info: ############# crontab START ##################
+2020-05-19 18:32:00 info: Successfully loaded admin from persistence
+2020-05-19 18:32:00 info: Query has completed, checking results
+2020-05-19 18:32:00 info: Current Block Height : 4
+2020-05-19 18:32:00 info: Successfully loaded admin from persistence
+2020-05-19 18:32:00 info: Query has completed, checking results
+2020-05-19 18:32:00 info: {"block_num":"1","previous_hash":"71601de6b5c9bc1fcb7ef9dc304c88699b70738c365e62ab30acfd563063c807","data_hash":"14aa66008bd5a213f46b50a44acf74a450b1286a12121a0c78591c576c905fbd","tx_id":"cbaae985181940390032b2009186c849f50f349e48175ac40d38ecf0c4dbd63e","timestamp":"2020-05-19T09:25:43.221Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"h3c","is_delete":false,"value":"\n\u0003h3c\u0012\u00031.0\u001a\u0004escc\"\u0004vscc*\u0016\u0012\b\u0012\u0006\b\u0001\u0012\u0002\b\u0000\u001a\n\u0012\b\n\u0006h3cMSP2D\n �\u0010X�2ڊ�]t\u0019Eu�]�\u0015��N�ݷ)d�MS��\t\u0012 �\u0006'c��=9�<oe\nCO���t�/H\r������J): �����4�Pk!��\u001b�/O�DA�Mo\t�:�Q\f�\u0007B@\u0012\u0010\u0012\u000e\b\u0001\u0012\u0002\b\u0000\u0012\u0002\b\u0001\u0012\u0002\b\u0002\u001a\f\u0012\n\n\u0006h3cMSP\u0010\u0001\u001a\r\u0012\u000b\n\u0007mijaMSP\u0010\u0001\u001a\u000f\u0012\r\n\tyapyapMSP\u0010\u0001"}],"response":200}
+2020-05-19 18:32:00 info: #####START INSERT BLOCK#####
+2020-05-19 18:32:00 info: insert Block Successed
+2020-05-19 18:32:00 info: #####END INSERT BLOCK######
+
+2020-05-19 18:32:00 info: 
+h3c1.0escc"vscc* 
+
+h3cMSP2D
+ �X�2ڊ�]tEu�]���N�ݷ)d�MS��	 �'c��=9�<oe
+CO���t�/H������J): �����4�Pk!���/O�DA�Mo	�:�Q�B@ 
+
+h3cMSP
+mijaMSP
+	yapyapMSP
+2020-05-19 18:32:00 error: Unexpected token  in JSON at position 1
+2020-05-19 18:33:00 info: ############# crontab START ##################
+2020-05-19 18:33:00 info: Successfully loaded admin from persistence
+2020-05-19 18:33:00 info: Query has completed, checking results
+2020-05-19 18:33:00 info: Current Block Height : 4
+2020-05-19 18:33:00 info: Successfully loaded admin from persistence
+2020-05-19 18:33:00 info: Query has completed, checking results
+2020-05-19 18:33:00 info: {"block_num":"2","previous_hash":"8c6e6fabe5d22c67d4600517b56051b862b71b731312ef828d798ad0ffb8bc5a","data_hash":"f17f88785a33de919d5616c58f8ac8265b60b56c08de6eb3f2470d7a87c8d9d4","tx_id":"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a","timestamp":"2020-05-19T09:28:18.820Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00001","is_delete":false,"value":"{\"init\":\"example@paypro.co.kr\"}"},{"key":"USER_00001_0","is_delete":false,"value":"{\"tx_id\":\"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a\",\"merchant\":\"삼성\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:33:00 info: #####START INSERT BLOCK#####
+2020-05-19 18:33:00 info: insert Block Successed
+2020-05-19 18:33:00 info: #####END INSERT BLOCK######
+
+2020-05-19 18:33:00 info: {"tx_id":"1ee3022b074d0f4b674d3fea44e6d8e8e559321f74be8c332fedf2947201396a","merchant":"삼성","symbol":"h3c","quantity":"100"}
+2020-05-19 18:33:00 info: #####START INSERT TRANSACTION#####
+2020-05-19 18:33:00 info: #####END INSERT TRANSACTION######
+
+2020-05-19 18:33:00 info: Successfully loaded admin from persistence
+2020-05-19 18:33:00 info: insert Tx Successed
+2020-05-19 18:33:00 info: Query has completed, checking results
+2020-05-19 18:33:00 info: {"block_num":"3","previous_hash":"644773feb5c4183a9cacdefe459773fa3705bcea77ca47cf0f407d270a722ba4","data_hash":"62d749619166603f3622e025fd87b8a2f6e734a1c7e1ef4673a87e00b7c05a68","tx_id":"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4","timestamp":"2020-05-19T09:29:46.276Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00002","is_delete":false,"value":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"key":"USER_00002_0","is_delete":false,"value":"{\"tx_id\":\"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4\",\"merchant\":\"삼성\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:33:00 info: #####START INSERT BLOCK#####
+2020-05-19 18:33:00 info: insert Block Successed
+2020-05-19 18:33:00 info: #####END INSERT BLOCK######
+
+2020-05-19 18:33:00 info: {"tx_id":"ac5b557ff292194d1197040902249c273289eecd8bf908ae90ff640f1cc955d4","merchant":"삼성","symbol":"h3c","quantity":"100"}
+2020-05-19 18:33:00 info: #####START INSERT TRANSACTION#####
+2020-05-19 18:33:00 info: #####END INSERT TRANSACTION######
+
+2020-05-19 18:33:00 info: ############# crontab END ################## 
+
+2020-05-19 18:33:00 info: insert Tx Successed
+2020-05-19 18:34:00 info: ############# crontab START ##################
+2020-05-19 18:34:00 info: Successfully loaded admin from persistence
+2020-05-19 18:34:00 info: Query has completed, checking results
+2020-05-19 18:34:00 info: Current Block Height : 4
+2020-05-19 18:34:00 info: ############# crontab END ################## 
+
+2020-05-19 18:34:55 info: selectAllUser from Hyper
+2020-05-19 18:34:55 info: Successfully loaded admin from persistence
+2020-05-19 18:34:55 info: Query has completed, checking results
+2020-05-19 18:34:55 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:34:55 info: Response is 
+2020-05-19 18:34:55 info: [object Object],[object Object]
+
+2020-05-19 18:35:00 info: ############# crontab START ##################
+2020-05-19 18:35:00 info: Successfully loaded admin from persistence
+2020-05-19 18:35:00 info: Query has completed, checking results
+2020-05-19 18:35:00 info: Current Block Height : 4
+2020-05-19 18:35:00 info: ############# crontab END ################## 
+
+2020-05-19 18:35:20 info: selectAllUser from Hyper
+2020-05-19 18:35:20 info: Successfully loaded admin from persistence
+2020-05-19 18:35:20 info: Query has completed, checking results
+2020-05-19 18:35:20 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:35:20 info: Response is 
+2020-05-19 18:35:20 info: [object Object],[object Object]
+
+2020-05-19 18:35:57 info: selectAllUser from Hyper
+2020-05-19 18:35:57 info: Successfully loaded admin from persistence
+2020-05-19 18:35:57 info: Query has completed, checking results
+2020-05-19 18:35:57 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:35:57 info: Response is 
+2020-05-19 18:35:57 info: [object Object],[object Object]
+
+2020-05-19 18:35:59 info: selectAllUser from Hyper
+2020-05-19 18:35:59 info: Successfully loaded admin from persistence
+2020-05-19 18:35:59 info: Query has completed, checking results
+2020-05-19 18:35:59 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:35:59 info: Response is 
+2020-05-19 18:35:59 info: [object Object],[object Object]
+
+2020-05-19 18:36:00 info: ############# crontab START ##################
+2020-05-19 18:36:00 info: Successfully loaded admin from persistence
+2020-05-19 18:36:00 info: Query has completed, checking results
+2020-05-19 18:36:00 info: Current Block Height : 4
+2020-05-19 18:36:00 info: ############# crontab END ################## 
+
+2020-05-19 18:36:20 info: selectAllUser from Hyper
+2020-05-19 18:36:20 info: Successfully loaded admin from persistence
+2020-05-19 18:36:21 info: Query has completed, checking results
+2020-05-19 18:36:21 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:36:21 info: Response is 
+2020-05-19 18:36:21 info: [object Object],[object Object]
+
+2020-05-19 18:36:34 info: selectAllUser from Hyper
+2020-05-19 18:36:34 info: Successfully loaded admin from persistence
+2020-05-19 18:36:35 info: Query has completed, checking results
+2020-05-19 18:36:35 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:36:35 info: Response is 
+2020-05-19 18:36:35 info: [object Object],[object Object]
+
+2020-05-19 18:36:41 info: selectAllUser from Hyper
+2020-05-19 18:36:41 info: Successfully loaded admin from persistence
+2020-05-19 18:36:41 info: Query has completed, checking results
+2020-05-19 18:36:41 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:36:41 info: Response is 
+2020-05-19 18:36:41 info: [object Object],[object Object]
+
+2020-05-19 18:36:43 info: selectAllUser from Hyper
+2020-05-19 18:36:43 info: Successfully loaded admin from persistence
+2020-05-19 18:36:43 info: Query has completed, checking results
+2020-05-19 18:36:43 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:36:43 info: Response is 
+2020-05-19 18:36:43 info: [object Object],[object Object]
+
+2020-05-19 18:36:45 info: ###### start Tx paging ######1
+2020-05-19 18:36:45 info: ##### Start select paging Tx ######
+2020-05-19 18:36:47 info: selectAllUser from Hyper
+2020-05-19 18:36:47 info: Successfully loaded admin from persistence
+2020-05-19 18:36:47 info: Query has completed, checking results
+2020-05-19 18:36:47 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:36:47 info: Response is 
+2020-05-19 18:36:47 info: [object Object],[object Object]
+
+2020-05-19 18:36:47 info: ##### get Height Info ##### 
+2020-05-19 18:36:47 info: ###### start Today Tx ######
+2020-05-19 18:36:47 info: Successfully loaded admin from persistence
+2020-05-19 18:36:47 info: Query has completed, checking results
+2020-05-19 18:36:47 info: [object Object]
+
+2020-05-19 18:36:48 info: selectAllUser from Hyper
+2020-05-19 18:36:48 info: Successfully loaded admin from persistence
+2020-05-19 18:36:49 info: Query has completed, checking results
+2020-05-19 18:36:49 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"}]
+2020-05-19 18:36:49 info: Response is 
+2020-05-19 18:36:49 info: [object Object],[object Object]
+
+2020-05-19 18:36:50 info: ###### start Tx paging ######1
+2020-05-19 18:36:50 info: ##### Start select paging Tx ######
+2020-05-19 18:37:00 info: ############# crontab START ##################
+2020-05-19 18:37:00 info: Successfully loaded admin from persistence
+2020-05-19 18:37:00 info: Query has completed, checking results
+2020-05-19 18:37:00 info: Current Block Height : 4
+2020-05-19 18:37:00 info: ############# crontab END ################## 
+
+2020-05-19 18:37:00 info: ##### get Height Info ##### 
+2020-05-19 18:37:00 info: ###### start Today Tx ######
+2020-05-19 18:37:00 info: Successfully loaded admin from persistence
+2020-05-19 18:37:00 info: Query has completed, checking results
+2020-05-19 18:37:00 info: [object Object]
+
+2020-05-19 18:37:01 info: ##### get Block Info by BlockNumber ##### 
+2020-05-19 18:37:01 info: Successfully loaded admin from persistence
+2020-05-19 18:37:01 info: Query has completed, checking results
+2020-05-19 18:37:01 info: [object Object]
+
+2020-05-19 18:37:04 info: ##### get Block Info by BlockNumber ##### 
+2020-05-19 18:37:04 info: Successfully loaded admin from persistence
+2020-05-19 18:37:04 info: Query has completed, checking results
+2020-05-19 18:37:04 info: [object Object]
+
+2020-05-19 18:37:06 info: ###### start Tx paging ######1
+2020-05-19 18:37:06 info: ##### Start select paging Tx ######
+2020-05-19 18:37:20 info: insertUserTx To Hyper
+2020-05-19 18:37:20 info: Successfully loaded admin from persistence
+2020-05-19 18:37:20 info: Assigning transaction_id: 
+2020-05-19 18:37:20 info: Transaction proposal was good
+2020-05-19 18:37:20 info: Successfully sent Proposal and received ProposalResponse: Status - 200, message - ""
+2020-05-19 18:37:21 info: The transaction has been committed on peer localhost:7051
+2020-05-19 18:37:21 info: Send transaction promise and event listener promise have completed
+2020-05-19 18:37:21 info: Successfully sent transaction to the orderer.
+2020-05-19 18:37:21 info: Successfully committed the change to the ledger by the peer
+2020-05-19 18:37:21 info: {"result":1,"msg":"successed","tx_id":"f2cbe48767684802ab83ae0cefbca1782516723fb965b2d9211ef813ec777a78"}
+
+2020-05-19 18:37:24 info: ###### start Tx paging ######1
+2020-05-19 18:37:24 info: ##### Start select paging Tx ######
+2020-05-19 18:37:26 info: ##### get Height Info ##### 
+2020-05-19 18:37:26 info: ###### start Today Tx ######
+2020-05-19 18:37:26 info: Successfully loaded admin from persistence
+2020-05-19 18:37:26 info: Query has completed, checking results
+2020-05-19 18:37:26 info: [object Object]
+
+2020-05-19 18:37:29 info: ##### get Block Info by BlockNumber ##### 
+2020-05-19 18:37:29 info: Successfully loaded admin from persistence
+2020-05-19 18:37:29 error: [object Object]
+2020-05-19 18:37:29 info: [object Object]
+
+2020-05-19 18:37:33 info: ##### get Block Info by BlockNumber ##### 
+2020-05-19 18:37:33 info: Successfully loaded admin from persistence
+2020-05-19 18:37:33 info: Query has completed, checking results
+2020-05-19 18:37:33 info: [object Object]
+
+2020-05-19 18:37:38 info: ##### get Block Info by BlockNumber ##### 
+2020-05-19 18:37:38 info: Successfully loaded admin from persistence
+2020-05-19 18:37:38 info: Query has completed, checking results
+2020-05-19 18:37:38 info: [object Object]
+
+2020-05-19 18:37:48 info: ##### get TX Info by txId ##### 
+2020-05-19 18:37:48 info: Error: Failed to get transaction with id f2b50fa5dc05e0a48be8328350f9d71714f939b80d3a4060a30b9abc81ade208, error Entry not found in index
+
+2020-05-19 18:37:53 info: ##### get Block Info by BlockNumber ##### 
+2020-05-19 18:37:53 info: Successfully loaded admin from persistence
+2020-05-19 18:37:53 info: Query has completed, checking results
+2020-05-19 18:37:53 info: [object Object]
+
+2020-05-19 18:37:58 info: ##### get TX Info by txId ##### 
+2020-05-19 18:37:58 info: Error: Failed to get transaction with id 6d52dbf58773dded491f8bffe37d5d3d074dc1bc707d73fef8373322fb0075ea, error Entry not found in index
+
+2020-05-19 18:38:00 info: ############# crontab START ##################
+2020-05-19 18:38:00 info: Successfully loaded admin from persistence
+2020-05-19 18:38:00 info: Query has completed, checking results
+2020-05-19 18:38:00 info: Current Block Height : 5
+2020-05-19 18:38:00 info: Successfully loaded admin from persistence
+2020-05-19 18:38:00 info: Query has completed, checking results
+2020-05-19 18:38:00 info: {"block_num":"4","previous_hash":"6d52dbf58773dded491f8bffe37d5d3d074dc1bc707d73fef8373322fb0075ea","data_hash":"f2b50fa5dc05e0a48be8328350f9d71714f939b80d3a4060a30b9abc81ade208","tx_id":"f2cbe48767684802ab83ae0cefbca1782516723fb965b2d9211ef813ec777a78","timestamp":"2020-05-19T09:37:20.379Z","channel_id":"allchannel","transaction_type":"ENDORSER_TRANSACTION","creator":"h3cMSP","action":[{"key":"USER00003","is_delete":false,"value":"{\"init\":\"rlahdl@paypro.co.kr\"}"},{"key":"USER_00003_0","is_delete":false,"value":"{\"tx_id\":\"f2cbe48767684802ab83ae0cefbca1782516723fb965b2d9211ef813ec777a78\",\"merchant\":\"LG\",\"symbol\":\"h3c\",\"quantity\":\"100\"}"}],"response":200}
+2020-05-19 18:38:00 info: #####START INSERT BLOCK#####
+2020-05-19 18:38:00 info: insert Block Successed
+2020-05-19 18:38:00 info: #####END INSERT BLOCK######
+
+2020-05-19 18:38:00 info: {"tx_id":"f2cbe48767684802ab83ae0cefbca1782516723fb965b2d9211ef813ec777a78","merchant":"LG","symbol":"h3c","quantity":"100"}
+2020-05-19 18:38:00 info: #####START INSERT TRANSACTION#####
+2020-05-19 18:38:00 info: #####END INSERT TRANSACTION######
+
+2020-05-19 18:38:00 info: ############# crontab END ################## 
+
+2020-05-19 18:38:00 info: insert Tx Successed
+2020-05-19 18:38:07 info: selectAllUser from Hyper
+2020-05-19 18:38:07 info: Successfully loaded admin from persistence
+2020-05-19 18:38:07 info: Query has completed, checking results
+2020-05-19 18:38:07 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"Key":"USER00003","Record":"{\"init\":\"rlahdl@paypro.co.kr\"}"}]
+2020-05-19 18:38:07 info: Response is 
+2020-05-19 18:38:07 info: [object Object],[object Object],[object Object]
+
+2020-05-19 18:38:08 info: ###### start Tx paging ######1
+2020-05-19 18:38:08 info: ##### Start select paging Tx ######
+2020-05-19 18:38:12 info: ##### get Height Info ##### 
+2020-05-19 18:38:12 info: ###### start Today Tx ######
+2020-05-19 18:38:12 info: Successfully loaded admin from persistence
+2020-05-19 18:38:12 info: Query has completed, checking results
+2020-05-19 18:38:12 info: [object Object]
+
+2020-05-19 18:38:13 info: selectAllUser from Hyper
+2020-05-19 18:38:13 info: Successfully loaded admin from persistence
+2020-05-19 18:38:13 info: Query has completed, checking results
+2020-05-19 18:38:13 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"Key":"USER00003","Record":"{\"init\":\"rlahdl@paypro.co.kr\"}"}]
+2020-05-19 18:38:13 info: Response is 
+2020-05-19 18:38:13 info: [object Object],[object Object],[object Object]
+
+2020-05-19 18:38:13 info: ###### start Tx paging ######1
+2020-05-19 18:38:13 info: ##### Start select paging Tx ######
+2020-05-19 18:38:13 info: selectAllUser from Hyper
+2020-05-19 18:38:13 info: Successfully loaded admin from persistence
+2020-05-19 18:38:14 info: Query has completed, checking results
+2020-05-19 18:38:14 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"Key":"USER00003","Record":"{\"init\":\"rlahdl@paypro.co.kr\"}"}]
+2020-05-19 18:38:14 info: Response is 
+2020-05-19 18:38:14 info: [object Object],[object Object],[object Object]
+
+2020-05-19 18:38:14 info: ##### get Height Info ##### 
+2020-05-19 18:38:14 info: ###### start Today Tx ######
+2020-05-19 18:38:14 info: Successfully loaded admin from persistence
+2020-05-19 18:38:14 info: Query has completed, checking results
+2020-05-19 18:38:14 info: [object Object]
+
+2020-05-19 18:38:14 info: selectAllUser from Hyper
+2020-05-19 18:38:14 info: Successfully loaded admin from persistence
+2020-05-19 18:38:14 info: Query has completed, checking results
+2020-05-19 18:38:14 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"Key":"USER00003","Record":"{\"init\":\"rlahdl@paypro.co.kr\"}"}]
+2020-05-19 18:38:14 info: Response is 
+2020-05-19 18:38:14 info: [object Object],[object Object],[object Object]
+
+2020-05-19 18:38:15 info: ###### start Tx paging ######1
+2020-05-19 18:38:15 info: ##### Start select paging Tx ######
+2020-05-19 18:38:22 info: selectAllUser from Hyper
+2020-05-19 18:38:22 info: Successfully loaded admin from persistence
+2020-05-19 18:38:22 info: Query has completed, checking results
+2020-05-19 18:38:22 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"Key":"USER00003","Record":"{\"init\":\"rlahdl@paypro.co.kr\"}"}]
+2020-05-19 18:38:22 info: Response is 
+2020-05-19 18:38:22 info: [object Object],[object Object],[object Object]
+
+2020-05-19 18:38:46 info: ###### start Tx paging ######1
+2020-05-19 18:38:46 info: ##### Start select paging Tx ######
+2020-05-19 18:38:49 info: ###### start Tx paging ######1
+2020-05-19 18:38:49 info: ##### Start select paging Tx ######
+2020-05-19 18:38:51 info: ##### get Height Info ##### 
+2020-05-19 18:38:51 info: ###### start Today Tx ######
+2020-05-19 18:38:51 info: Successfully loaded admin from persistence
+2020-05-19 18:38:51 info: Query has completed, checking results
+2020-05-19 18:38:51 info: [object Object]
+
+2020-05-19 18:38:52 info: selectAllUser from Hyper
+2020-05-19 18:38:52 info: Successfully loaded admin from persistence
+2020-05-19 18:38:52 info: Query has completed, checking results
+2020-05-19 18:38:52 info: [{"Key":"USER00001","Record":"{\"init\":\"example@paypro.co.kr\"}"},{"Key":"USER00002","Record":"{\"init\":\"dfdfdff@paypro.co.kr\"}"},{"Key":"USER00003","Record":"{\"init\":\"rlahdl@paypro.co.kr\"}"}]
+2020-05-19 18:38:52 info: Response is 
+2020-05-19 18:38:52 info: [object Object],[object Object],[object Object]
+
+2020-05-19 18:39:00 info: ############# crontab START ##################
+2020-05-19 18:39:00 info: Successfully loaded admin from persistence
+2020-05-19 18:39:00 info: Query has completed, checking results
+2020-05-19 18:39:00 info: Current Block Height : 5
+2020-05-19 18:39:00 info: ############# crontab END ################## 
+

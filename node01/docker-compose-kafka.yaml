@@ -1,0 +1,217 @@
+version: '3.4'
+
+volumes:
+  kafka0.paypro.com:
+  kafka1.paypro.com:
+  kafka2.paypro.com:
+  kafka3.paypro.com:
+  zookeeper0:
+  zookeeper1:
+  zookeeper2:
+
+networks:
+  minho:
+    external:
+      name: minho
+
+services:
+  kafka0:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+
+    container_name: kafka0.paypro.com
+    image: hyperledger/fabric-kafka
+    restart: always
+    environment:
+      # - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=test
+      - KAFKA_MESSAGE_MAX_BYTES=1048576
+      - KAFKA_REPLICA_FETCH_MAX_BYTES=1048576
+      - KAFKA_UNCLEAN_LEADER_ELECTION_ENABLE=false
+      - KAFKA_BROKER_ID=0
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+      - KAFKA_ADVERTISED_HOST_NAME=kafka0.paypro.com
+    ports:
+      - '9092'
+
+    networks:
+      minho:
+          aliases:
+            - kafka0.paypro.com
+
+  kafka1:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+
+    container_name: kafka1.paypro.com
+    image: hyperledger/fabric-kafka
+    restart: always
+    environment:
+      # - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=test
+      - KAFKA_MESSAGE_MAX_BYTES=1048576
+      - KAFKA_REPLICA_FETCH_MAX_BYTES=1048576
+      - KAFKA_UNCLEAN_LEADER_ELECTION_ENABLE=false
+      - KAFKA_BROKER_ID=1
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+      - KAFKA_ADVERTISED_HOST_NAME=kafka1.paypro.com
+    ports:
+      - '9092'
+
+    networks:
+      minho:
+          aliases:
+            - kafka1.paypro.com
+
+  kafka2:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+
+    container_name: kafka2.paypro.com
+    image: hyperledger/fabric-kafka
+    restart: always
+    environment:
+      # - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=test
+      - KAFKA_MESSAGE_MAX_BYTES=1048576
+      - KAFKA_REPLICA_FETCH_MAX_BYTES=1048576
+      - KAFKA_UNCLEAN_LEADER_ELECTION_ENABLE=false
+      - KAFKA_BROKER_ID=2
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+      - KAFKA_ADVERTISED_HOST_NAME=kafka2.paypro.com
+    ports:
+      - '9092'
+
+    networks:
+      minho:
+          aliases:
+            - kafka2.paypro.com
+
+  kafka3:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+
+    container_name: kafka3.paypro.com
+    image: hyperledger/fabric-kafka
+    restart: always
+    environment:
+      # - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=test
+      - KAFKA_MESSAGE_MAX_BYTES=1048576
+      - KAFKA_REPLICA_FETCH_MAX_BYTES=1048576
+      - KAFKA_UNCLEAN_LEADER_ELECTION_ENABLE=false
+      - KAFKA_BROKER_ID=3
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+      - KAFKA_ADVERTISED_HOST_NAME=kafka3.paypro.com
+    ports:
+      - '9092'
+
+    networks:
+      minho:
+          aliases:
+            - kafka3.paypro.com
+
+  zookeeper0:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+
+    image: hyperledger/fabric-zookeeper
+    restart: always
+    ports:
+      - '2181'
+      - '2888'
+      - '3888'
+
+    environment:
+      - ZOO_MY_ID=1
+      - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+    networks:
+      minho:
+          aliases:
+            - zookeeper0.paypro.com
+
+  zookeeper1:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+
+    image: hyperledger/fabric-zookeeper
+    restart: always
+    ports:
+      - '2181'
+      - '2888'
+      - '3888'
+
+    environment:
+      - ZOO_MY_ID=2
+      - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+    networks:
+      minho:
+          aliases:
+            - zookeeper1.paypro.com
+
+
+  zookeeper2:
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == peer0.h3c.paypro.com
+          
+    image: hyperledger/fabric-zookeeper
+    restart: always
+    ports:
+      - '2181'
+      - '2888'
+      - '3888'
+
+    environment:
+      - ZOO_MY_ID=3
+      - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+    networks:
+      minho:
+          aliases:
+            - zookeeper2.paypro.com
+

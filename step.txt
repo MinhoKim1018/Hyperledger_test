@@ -1,0 +1,34 @@
+1. msp 생성
+    - crypto-config.yaml 파일 생성
+    - 실행
+        - cryptogen generate --config=./crypto-config.yaml
+
+2. genesisblock 생성 , 채널 별 genesisblock 생성, 앵커 피어설정(각채널에 각기관)
+    - configtx.yaml 작성 
+    - 실행
+          - configtxgen -profile PayproOrdererGenesis -outputBlock ./config/genesis.block 
+          - configtxgen -profile ExchangeChannel -outputCreateChannelTx ./config/ExchangeChannel.tx -channelID exchangechannel
+          - configtxgen -profile ServiceChannel -outputAnchorPeersUpdate ./config/H3cAnchor_sv.tx -channelID servicechannel -asOrg H3cMSP
+
+
+3. docker-compose 로 container 생성 및 실행
+    - 전체 네트워크 관련 환경설정을 해 줘야함.
+    - ca나 cli관련 정책에 대한 설계 필요. 예제는 간단하게 하나의 ca와 cli로 구성함
+    - ca msp 내용은 generate할 때 마다 달라지니 수작업으로 바꿔줘야함.
+   - 실행 : docker-compose -f docker-compose.yml up -d 
+
+4. 채널 생성 및 채널 join
+    - docker exec -e "CORE_PEER_LOCALMSPID=H3cMSP" -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/h3c.paypro.com/users/Admin@h3c.paypro.com/msp" -e "CORE_PEER_ADDRESS=peer0.h3c.paypro.com:8051" cli peer channel create -o paypro.com:7050 -c AllChannel -f /etc/hyperledger/config/AllChannel.tx
+
+    - docker exec -e "CORE_PEER_LOCALMSPID=ExpayMSP" -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/expay.paypro.com/users/Admin@expay.paypro.com/msp" -e "CORE_PEER_ADDRESS=peer0.expay.paypro.com:7051" cli peer channel join -b allchannel.block
+
+
+5. 채널에 체인코드 설치 및 인스탄시에이트
+
+    - docker exec cli peer chaincode install -n ${testversion} -v 1.0 -p "/opt/gopath/src/github.com/acsmart" -l "node"
+    - docker exec cli peer chaincode instantiate -o paypro.com:7050 -C allchannel -n ${testversion} -l "node" -v 1.0 -c '{"Args":[]}' -P "OR ('ExpayMSP.member','H3cMSP.member','MijaMSP.member', 'PrimeXMSP.member')"
+
+
+6. 체인코드 invoke 및 query
+
+ - docker exec cli peer chaincode invoke -o paypro.com:7050 -C allchannel -n ${testversion} -c '{"function":"makeLedgerFromAdmin","Args":["admin", "1000", "1000", "1000"]}'

@@ -1,0 +1,23 @@
+{
+  "name": "node-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-bearer-token": "^2.2.0",
+    "fabric-ca-client": "^1.4.0",
+    "fabric-client": "^1.4.0",
+    "grpc": "^1.24.2",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.11",
+    "log4js": "^3.0.6",
+    "morgan": "~1.9.1"
+  }
+}
